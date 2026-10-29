@@ -1,0 +1,42 @@
+{
+  "wake_window_seconds": {
+    "description": "被 @ 后注意力窗口时长（秒）：窗口内 AI 能看到群消息并免 @ 回复",
+    "type": "int",
+    "default": 30
+  },
+  "max_window_seconds": {
+    "description": "单次唤醒注意力总时长上限（秒）：连续续期累计到上限后强制退出，防止无限续杯",
+    "type": "int",
+    "default": 600
+  },
+  "quiet_close_seconds": {
+    "description": "到期静默直关：窗口到期时若最近 N 秒内无人说话，跳过 LLM 自查直接封闭（0 = 关闭该优化）",
+    "type": "int",
+    "default": 10
+  },
+  "exit_check_enabled": {
+    "description": "窗口到期时让 AI 自查上下文决定继续还是退出（关闭则到期直接封闭）",
+    "type": "bool",
+    "default": true
+  },
+  "silent_marker": {
+    "description": "窗口内无需回应时 AI 应输出的静默标记，插件会拦截不发",
+    "type": "string",
+    "default": "<silent/>"
+  },
+  "wake_history_count": {
+    "description": "被 @ 唤醒时注入给 AI 的最近群聊记录条数（仅本次回复可见，不进记忆）",
+    "type": "int",
+    "default": 20
+  },
+  "transcript_max_messages": {
+    "description": "退出自查时携带的窗口内聊天记录条数上限",
+    "type": "int",
+    "default": 30
+  },
+  "groups": {
+    "description": "生效群号列表（留空 = 所有群都启用闸门）",
+    "type": "list",
+    "default": []
+  }
+}
