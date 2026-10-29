@@ -1,8 +1,11 @@
 name: astrbot_plugin_attn_gate
 display_name: "蔗糖的注意力闸门~"
 desc: 群聊注意力硬闸门：平时 AI 完全看不到群消息（不进上下文、不写记忆）；被 @ 后开启注意力窗口，窗口内免 @ 可见可回；窗口到期由 AI 自查上下文决定继续或退出，退出后重新封闭直到下一次被 @。
-version: v1.1.0
+version: 1.1.0
 author: SucRoseZT
 repo: https://github.com/SucRoseZT/astrbot_plugin_attn_gate
 tags:
-  - astrbot
+  - group-chat
+  - attention
+  - context
+  - filter
